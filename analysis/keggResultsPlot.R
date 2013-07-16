@@ -38,7 +38,7 @@ m<-ggplot(dataTable, aes(x=dataTable[,3])) +
   #, origin = (bw/2)
   geom_histogram(binwidth = 1 , origin = -.5)+ 
   scale_y_continuous(trans=asinh_trans(), breaks = grid , name = "SFam Frequency (arcSinh transformed)")+
-  scale_x_continuous( breaks=grid2,name = "Kegg Orthology Hits") +
+  scale_x_continuous( breaks=grid2,name = "Kegg Pathway Hits") +
   ggtitle("Number of Kegg Pathway hits per Sfam Family (FCI0, FCI1, FCI2)")
 
 ggsave(m, filename="SFamPathwayHits.pdf", width = 7, height = 7)
